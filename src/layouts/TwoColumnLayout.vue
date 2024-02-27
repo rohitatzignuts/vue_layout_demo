@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {RouterLink} from 'vue-router'
+// import ArticleCardGridVue from '@/components/ArticleCardGrid.vue';
 </script>
 <template>
 <v-layout class="rounded rounded-md">
@@ -14,8 +15,7 @@ import {RouterLink} from 'vue-router'
     </v-navigation-drawer>
 
     <v-main class="d-flex align-center flex-column justify-between" style="min-height: 300px;">
-        <slot name="main" />
-        <v-footer>&#169; Zignuts@2024</v-footer>   
+        <RouterView />
     </v-main>
 </v-layout>
 </template>

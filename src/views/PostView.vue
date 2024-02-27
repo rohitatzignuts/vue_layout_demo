@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ArticleCard from "@/components/ArticleCard.vue";
-import useArticles  from "../composables/useArticles.ts";
+import useArticles  from "../composables/useArticles";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 
@@ -16,9 +16,5 @@ const article = ref(articles.find((article) => article.id === articleId) || {
 
 </script>
 <template>
-    <component :is="$route.meta.layout  || 'section' " >
-    <template #main>
-      <ArticleCard :article="article" />
-    </template>
-  </component>
+    <ArticleCard :article="article" />
 </template>

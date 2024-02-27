@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import ArticleCardGrid from "../components/ArticleCardGrid.vue";
-import TwoColumnLayout from "../layouts/TwoColumnLayout.vue";
 
 </script>
 <template>
-  <TwoColumnLayout >
+  <component :is="$route.meta.layout  || 'section' " >
     <template #main>
       <ArticleCardGrid />
     </template>
-  </TwoColumnLayout>
+  </component>
 </template>

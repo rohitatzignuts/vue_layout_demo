@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <section class="main">
+  <section>
     <RouterView />
   </section>
 

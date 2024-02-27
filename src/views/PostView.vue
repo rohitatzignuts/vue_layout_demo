@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import ArticleCard from "@/components/ArticleCard.vue";
-import TwoColumnLayout from "../layouts/TwoColumnLayout.vue";
 import useArticles  from "../composables/useArticles.ts";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
@@ -17,9 +16,9 @@ const article = ref(articles.find((article) => article.id === articleId) || {
 
 </script>
 <template>
-  <TwoColumnLayout >
+    <component :is="$route.meta.layout  || 'section' " >
     <template #main>
       <ArticleCard :article="article" />
     </template>
-  </TwoColumnLayout>
+  </component>
 </template>
